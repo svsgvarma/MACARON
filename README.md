@@ -95,7 +95,9 @@ VALIDATING SNVs' PRESENCE ON THE SAME READ
 
 To confirm the existence of multi-SNVs within the same genetic codon, an accessory BASH-shell script (available with MACARON) calculates the read count information of affected bases. Using SAMTools, generate a subset of your BAM file (it should be the same used to generate VCF file for MACARON run) covering 50 bps over each clustered SNVs.
 
-example: samtools view –hb –L sub1.bed sample02.bam > sub1.chr22_21349676-21349677.sample02.bam
+example:
+
+    samtools view –hb –L sub1.bed sample02.bam > sub1.chr22_21349676-21349677.sample02.bam
 
 sub1.bed
 chr22	21349676
@@ -104,12 +106,14 @@ The naming format of output BAM file should be the same.
 
 Once subset BAM files are generated, run MACARON_validate.sh.
 
-example: MACARON_validate.sh sub1.chr22_21349676-21349677.sample02.bam
+example: 
+    
+    MACARON_validate.sh sub1.chr22_21349676-21349677.sample02.bam
 
 This will generate an output text file (MACARON_validate.txt) allowing the user for further analysis.
 
 
-# REFERENCES:
+# References:
 
 Van der Auwera G.A., et al. (2013) From FastQ Data to High-Confidence Variant Calls: The Genome Analysis Toolkit Best Practices Pipeline, Curr Protoc Bioinformatics, 43:11.10.1-11.10.33.
 
@@ -120,7 +124,7 @@ McLaren, W., et al. (2010) Deriving the consequences of genomic variants with th
 Wang, K., Li, M. and Hakonarson, H. (2010) ANNOVAR: functional annotation of genetic variants from high-throughput sequencing data, Nucleic Acids Res, 38, e164.
 
 
-# CITATION:
+# Cite:
 
 MACARON: A python framework to identify and re-annotate multi-base affected codons in whole genome/exome sequence data
 Khan W, Saripella GV, Ludwig T, Cuppens T, Thibord F; FREX consortium, Génin E, Deleuze JF, Trégouët DA; GENMED Consortium.
