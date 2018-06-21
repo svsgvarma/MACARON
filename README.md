@@ -1,4 +1,4 @@
-Multi-bAse Codon-Associated variant Re-annotatiON (MACARON)
+# MACARON (Multi-bAse Codon-Associated variant Re-annotatiON)
 
 
 This README file provides information about the contents of folder, MACARON_GenMed
@@ -9,9 +9,11 @@ This README file provides information about the contents of folder, MACARON_GenM
     • sub1.chr22_21349676-21349677.sample02.bam  –  a subset of BAM file used as input for MACARON_validate.sh
     • MACARON_validate.txt  –  The output file with read count information of concerned pcSNV in sample02 (in this case).
 The information below includes how to run MACARON to filter a list of variant records (from VCF file) called by any existing SNP-based variant caller to identify SNVs with the same genetic codon and correct their corresponding amino acid prediction.
-REQUIREMENTS
+
+# REQUIREMENTS:
 
 MACARON is executable in PYTHON and tested with 2.7.X, LINUX UBUNTU 16.04 LTS. However, MACARON can be run on any other LINUX version. Before running MACARON, please make sure that following software are properly installed:
+
 1. PYTHON v2.7 or later (tested with PYTHON v2.7.12). Please make sure that your running environment is set to the required version of PYTHON.
 
 2. Check your JAVA version as MACARON is tested with: java -version
@@ -46,7 +48,7 @@ A Note on TECHNICAL ISSUES:
 
 - Version of both Human Reference Genome file and SnpEff database file should be the same (hg19 / GRCh37 = SnpEff GRCh37.75) or (hg38 / GRCh38 = SnpEff GRCh38.86).
 
-RUNNING THE PIPELINE:
+# RUNNING THE PIPELINE:
 
 Before running MACARON, please add full paths of GATK and SnpEff to MACARON algorithm, e.g.,
 USAGE INSTRUCTIONS:￫￫	Full path to the software directories should be set before compiling.
@@ -59,7 +61,7 @@ SNPEFF_HG="GRChXX.XX"
 Output file name prefix: MACARON uses input VCF file name as prefix by default. User can change it with "-o" option.
 python MACARON_v0.3.py -i input_test.vcf -o MACARON_output.txt -d full_path_of_input_VCFfile_directory -f INFO_FILED_HEADER
 
-ADDITIONAL OPTIONS:
+# ADDITIONAL OPTIONS:
 
 -f has three options:
 
@@ -97,7 +99,7 @@ example: MACARON_validate.sh sub1.chr22_21349676-21349677.sample02.bam
 This will generate an output text file (MACARON_validate.txt) allowing the user for further analysis.
 
 
-REFERENCES:
+# REFERENCES:
 
 Van der Auwera G.A., et al. (2013) From FastQ Data to High-Confidence Variant Calls: The Genome Analysis Toolkit Best Practices Pipeline, Curr Protoc Bioinformatics, 43:11.10.1-11.10.33.
 Cingolani, P., et al. (2012) A program for annotating and predicting the effects of single nucleotide polymorphisms, SnpEff: SNPs in the genome of Drosophila melanogaster strain w1118; iso-2; iso-3, Fly, 6, 80-92.
@@ -105,7 +107,7 @@ McLaren, W., et al. (2010) Deriving the consequences of genomic variants with th
 Wang, K., Li, M. and Hakonarson, H. (2010) ANNOVAR: functional annotation of genetic variants from high-throughput sequencing data, Nucleic Acids Res, 38, e164.
 
 
-Citation:
+# CITATION:
 
 MACARON: A python framework to identify and re-annotate multi-base affected codons in whole genome/exome sequence data
 Khan W, Saripella GV, Ludwig T, Cuppens T, Thibord F; FREX consortium, Génin E, Deleuze JF, Trégouët DA; GENMED Consortium.
