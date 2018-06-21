@@ -126,6 +126,6 @@ Wang, K., Li, M. and Hakonarson, H. (2010) ANNOVAR: functional annotation of gen
 
 # Cite:
 
-MACARON: A python framework to identify and re-annotate multi-base affected codons in whole genome/exome sequence data
+MACARON: A python framework to identify and re-annotate multi-base affected codons in whole genome/exome sequence data.
 Khan W, Saripella GV, Ludwig T, Cuppens T, Thibord F; FREX consortium, Génin E, Deleuze JF, Trégouët DA; GENMED Consortium.
 Bioinformatics. 2018 May 3. doi: 10.1093/bioinformatics/bty382.
