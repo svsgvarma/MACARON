@@ -1,9 +1,5 @@
-####### Multi-bAse Codon-Associated variant Re-annotatiON (MACARON) #######
+Multi-bAse Codon-Associated variant Re-annotatiON (MACARON)
 
-CONTACT: david-alexandre.tregouet@inserm.fr
-VERSION: 0.3 VERSION DATE: 11th April, 2018
-
-########################
 
 This README file provides information about the contents of folder, MACARON_GenMed
     • MACARON_v0.3.py  –  The MACARON python code,
