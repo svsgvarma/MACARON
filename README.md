@@ -59,33 +59,35 @@ A Note on TECHNICAL ISSUES:
 # RUNNING THE PIPELINE:
 
 Before running MACARON, please add full paths of GATK and SnpEff to MACARON algorithm, e.g.,
-USAGE INSTRUCTIONS:￫￫	Full path to the software directories should be set before compiling.
-"""
-GATK="/full_path_to/GenomeAnalysisTK.jar"
-HG_REF="/full_path_to/Human_Reference_Genome.fasta"
-SNPEFF="/full_path_to/snpEff.jar"
-SNPEFF_HG="GRChXX.XX"
+
+USAGE INSTRUCTIONS: Full path to the software directories should be set before compiling.
+
+    GATK="/full_path_to/GenomeAnalysisTK.jar"
+    HG_REF="/full_path_to/Human_Reference_Genome.fasta"
+    SNPEFF="/full_path_to/snpEff.jar"
+    SNPEFF_HG="GRChXX.XX"
 
 Output file name prefix: MACARON uses input VCF file name as prefix by default. User can change it with "-o" option.
-python MACARON_v0.3.py -i input_test.vcf -o MACARON_output.txt -d full_path_of_input_VCFfile_directory -f INFO_FILED_HEADER
+
+    python MACARON_v0.3.py -i input_test.vcf -o MACARON_output.txt -d full_path_of_input_VCFfile_directory -f INFO_FILED_HEADER
 
 # ADDITIONAL OPTIONS:
 
--f has three options:
+    -f has three options:
 
--f CSQ (if input VCF file is additionally annotated with VEP, the output txt file also has the same complete annotation for each variant record)
+    -f CSQ (if input VCF file is additionally annotated with VEP, the output txt file also has the same complete annotation for each variant record)
 
--f EFF (if user wants to output SnpEff annotations in output txt file), or -f ANN (if SnpEff is used without -formatEff option)
+    -f EFF (if user wants to output SnpEff annotations in output txt file), or -f ANN (if SnpEff is used without -formatEff option)
 
--f DP,AF,Func.refGene,Gene.refGene,GeneDetail.refGene (this will keep any other default annotations of input VCF file and of ANNOVAR to output txt file)
+    -f DP,AF,Func.refGene,Gene.refGene,GeneDetail.refGene (this will keep any other default annotations of input VCF file and of ANNOVAR to output txt file)
 
--f can be used multiple times, e.g.,
+    -f can be used multiple times, e.g.,
 
--f CSQ,DP,Func.refGene
+    -f CSQ,DP,Func.refGene
 
-or
+    or
 
--f EFF,CSQ,AF
+    -f EFF,CSQ,AF
 
 The order of the columns in the output txt file depends on the order of INFO headers used here.
 
